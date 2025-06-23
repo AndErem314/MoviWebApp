@@ -1,7 +1,6 @@
 from models import db, User, Movie
 
 class DataManager():
-
     def create_user(self, name):
         """Add a new user to the database"""
         new_user = User(name=name)
@@ -21,17 +20,16 @@ class DataManager():
         """
         Add a new movie to a user's favorites.
         movie_data can be either:
-        - a dictionary with movie details (if fetching from OMDB first)
-        - or a Movie object (if creating in app.py first)
+        - a dictionary with movie details
+        - or a Movie object.
         """
         if isinstance(movie_data, Movie):
-            # If it's already a Movie object, just add it
             movie_data.user_id = user_id
             db.session.add(movie_data)
         else:
-            # If it's a dictionary, create a new Movie object
             new_movie = Movie(
-                title=movie_data.get('Title'),
+                name=movie_data.get('Title'),
+                director=movie_data.get('Director'),
                 year=movie_data.get('Year'),
                 imdb_id=movie_data.get('imdbID'),
                 poster_url=movie_data.get('Poster'),
@@ -41,11 +39,11 @@ class DataManager():
 
         db.session.commit()
 
-    def update_movie(self, movie_id, new_title):
-        """Update the title of a specific movie"""
+    def update_movie(self, movie_id, new_name):
+        """Update the name of a specific movie"""
         movie = Movie.query.get(movie_id)
         if movie:
-            movie.title = new_title
+            movie.name = new_name
             db.session.commit()
             return True
         return False
