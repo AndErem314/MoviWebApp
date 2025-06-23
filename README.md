@@ -1,26 +1,20 @@
 # 🎬 MoviWebApp
 
-This is a Python-based command-line application for managing a movie database with integrated OMDb API support. It allows you to:
-
-- Add movies by fetching data from the OMDb API
-- Store movie details in a SQLite database via SQLAlchemy
-- View statistics like average and median ratings
-- Generate a responsive static HTML page displaying your movie collection
+A Flask-based web application for managing your personal movie collection with a delicious popcorn-themed interface.
 
 ## 📦 Features
 
-- List, add, delete, and update movie and movie's rating
-- Search movies case-insensitively
-- Show best/worst rated movies and random recommendations
-- Sort movies by rating
-- Generate a static website using a template and style
+- **User Management**: Create and manage user profiles
+- **Movie Collection**: Add movies to your personal collection
+- **OMDb Integration**: Automatically fetch movie details using the OMDb API
+- **Beautiful Interface**: Popcorn-themed design with image backgrounds
 
 ## 🚀 Getting Started
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/Movie_advanced.git
-cd Movie_advanced
+git clone https://github.com/yourusername/MoviWebApp.git
+cd MoviWebApp
 ```
 
 ### 2. Set up your environment
@@ -35,18 +29,27 @@ pip install -r requirements.txt
 Create a .env file in the root directory with your OMDb API key:
 ```
 OMDB_KEY=your_api_key_here
+SECRET_KEY=your_secret_key_here
 ```
 
 You can get a free key from https://www.omdbapi.com/apikey.aspx.
 
-### 4. Run the app
+### 4. Initialize the database
 ```
-python run.py
+python init_db.py
+```
+### 5. Run the app
+```
+flask run
 ```
 ## 📋 Requirements
 	•	Python 3.7+
+    •	Flask 2.0+
+    •	SQLAlchemy
+    •	python-dotenv
 	•	Internet connection (for OMDb API)
 	•	OMDb API key
+    •	SECRET KEY for flash
 
 ## ✅ License
 
