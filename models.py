@@ -19,6 +19,7 @@ class Movie(db.Model):
     director = db.Column(db.String(100), nullable=False)
     year = db.Column(db.Integer)
     poster_url = db.Column(db.String(200))
+    imdb_id = db.Column(db.String(20))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'), nullable=False)
 
     def __repr__(self):
