@@ -1,101 +1,115 @@
-/* User Movies Page Styles */
-.movies-section {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
 }
 
-.user-header {
+/* Header & Navigation */
+.navbar {
+    background-color: #2e7d32; /* Dark green */
+    color: white;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.add-movie-form {
-    background: #f5f5f5;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+.navbar h1 a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
-.movies-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.movie-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.2s;
-}
-
-.movie-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-.movie-poster {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-.movie-details {
-    padding: 15px;
-}
-
-.movie-title {
-    margin: 0 0 5px 0;
-    font-size: 1.2rem;
-}
-
-.movie-year, .movie-director {
-    margin: 5px 0;
-    color: #666;
-}
-
-.movie-actions {
-    margin-top: 15px;
+.nav-links {
+    list-style: none;
     display: flex;
-    gap: 10px;
+    gap: 1.5rem;
 }
 
-.inline-form {
-    display: flex;
-    flex-grow: 1;
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
 }
 
-.small-btn {
-    padding: 5px 10px;
-    font-size: 0.9rem;
+.nav-links a:hover {
+    color: #a5d6a7; /* Light green */
 }
 
-.delete-btn {
-    background-color: #ff4444;
+/* Main Content */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
 }
 
-.no-movies {
-    text-align: center;
-    padding: 40px;
-    color: #666;
+/* Users Section */
+h2 {
+    color: #2e7d32; /* Dark green */
+    border-bottom: 2px solid #a5d6a7; /* Light green */
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
 }
 
-/* Flash messages */
-.flash-message {
-    padding: 10px 15px;
-    margin-bottom: 20px;
+/* User List */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: white;
+    margin: 0.5rem 0;
+    padding: 1rem;
     border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-left: 4px solid #a5d6a7; /* Light green accent */
 }
 
-.flash-success {
-    background-color: #d4edda;
-    color: #155724;
+/* Buttons */
+button, input[type="submit"] {
+    background-color: #388e3c; /* Medium green */
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
 }
 
-.flash-error {
-    background-color: #f8d7da;
-    color: #721c24;
+button:hover, input[type="submit"]:hover {
+    background-color: #2e7d32; /* Dark green */
+}
+
+/* Input Fields */
+input[type="text"] {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-right: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #2e7d32; /* Dark green */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Horizontal Rule */
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #a5d6a7; /* Light green */
+    margin: 2rem 0;
 }
