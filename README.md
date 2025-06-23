@@ -13,7 +13,7 @@ A Flask-based web application for managing your personal movie collection with a
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/MoviWebApp.git
+git clone https://github.com/AndErem314/MoviWebApp.git
 cd MoviWebApp
 ```
 
